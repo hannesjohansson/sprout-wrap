@@ -22,9 +22,9 @@ recipes:
 # development (rails)
 - sprout-osx-rbenv
 - pivotal_workstation::gem_setup
-- pivotal_workstation::mysql
-- pivotal_workstation::postgres
-- sprout-osx-apps::imagemagick
+#- pivotal_workstation::mysql
+#- pivotal_workstation::postgres
+#- sprout-osx-apps::imagemagick
 - sprout-osx-apps::node_js
 - sprout-osx-apps::qt
 
@@ -46,32 +46,8 @@ recipes:
 - sprout-osx-apps::virtualbox
 - sprout-osx-apps::vagrant
 
-# apps (editors)
-- sprout-osx-apps::textmate
-- sprout-osx-apps::textmate_bundles
-- sprout-osx-apps::textmate_preferences
-
-- sprout-osx-apps::macvim
-- sprout-osx-apps::ctags_exuberant
-
-- sprout-osx-apps::rubymine
-- sprout-osx-rubymine::preferences
-
-node_attributes:
-  git_pairs_domain: pivotallabs.com
-  git_pairs_authors:
-    - initials: ah
-      name: Abhijit Hiremagalur
-      shortname: abhi
-    - initials: bc
-      name: Brian Cunnie
-      shortname: cunnie
-    - initials: jrhb
-      name: Jonathan Barnes
-    - initials: lw
-      name: Luke Winikates
-      shortname: lwinikates
-  git_projects:
-    -
-      - sprout-wrap
-      - https://github.com/pivotal-sprout/sprout-wrap.git
+# My additions
+- sprout-osx-apps::sublime_text
+- sprout-osx-apps::alfred
+- sprout-osx-apps::charles_proxy
+- sprout-osx-apps::evernote
