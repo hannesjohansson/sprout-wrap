@@ -5,6 +5,15 @@ SITE
     homebrew (1.5.2)
 
 GIT
+  remote: git://github.com/pivotal-sprout/sprout-homebrew.git
+  path: .
+  ref: master
+  sha: dde985746fa3e552ea4d4ffb7ffea8568100845c
+  specs:
+    sprout-homebrew (0.1.0)
+      homebrew (>= 0.0.0)
+
+GIT
   remote: git://github.com/pivotal-sprout/sprout.git
   path: osx
   ref: master
@@ -112,6 +121,7 @@ DEPENDENCIES
   meta (>= 0)
   osx (>= 0)
   pivotal_workstation (>= 0)
+  sprout-homebrew (>= 0)
   sprout-osx-apps (>= 0)
   sprout-osx-base (>= 0)
   sprout-osx-git (>= 0)
