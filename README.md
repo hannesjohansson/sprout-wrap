@@ -1,6 +1,6 @@
-# uxhannes dev machine sprout-wrap
+# UXhannes OSX-sprout (sprout-wrap)
 
-This project is used to setup my OSX development machine. It's a fork of [sprout-wrap](https://github.com/pivotal-sprout/sprout-wrap/fork) and complimented with [sprout-homebrew](https://github.com/pivotal-sprout/sprout-homebrew).
+This project is used to setup my OSX development machine. It's a fork of [sprout-wrap](https://github.com/pivotal-sprout/sprout-wrap/fork) complimented with [sprout-homebrew](https://github.com/pivotal-sprout/sprout-homebrew).
 
 [Fork it](https://github.com/hannesjohansson/sprout-wrap/fork) to 
 customize its [attributes](http://docs.opscode.com/chef_overview_attributes.html) in [soloistrc](/soloistrc) and the list of recipes 
