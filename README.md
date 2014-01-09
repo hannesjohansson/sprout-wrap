@@ -1,4 +1,4 @@
-# UXhannes OSX-sprout (sprout-wrap)
+# UXHannes Workstation
 
 This project is used to setup my OSX development machine. It's a fork of [sprout-wrap](https://github.com/pivotal-sprout/sprout-wrap/fork) complimented with [sprout-homebrew](https://github.com/pivotal-sprout/sprout-homebrew).
 
