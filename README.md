@@ -1,17 +1,11 @@
-# sprout-wrap
+# uxhannes dev machine sprout-wrap
 
-[![Build Status](https://travis-ci.org/pivotal-sprout/sprout-wrap.png?branch=master)](https://travis-ci.org/pivotal-sprout/sprout-wrap)
+This project is used to setup my OSX development machine. It's a fork of [sprout-wrap](https://github.com/pivotal-sprout/sprout-wrap/fork) and complimented with [sprout-homebrew](https://github.com/pivotal-sprout/sprout-homebrew).
 
-This project uses [soloist](https://github.com/mkocher/soloist) and [librarian-chef](https://github.com/applicationsonline/librarian-chef)
-to run a subset of the recipes in sprout's [cookbooks]((https://github.com/pivotal-sprout/sprout).
-
-[Fork it](https://github.com/pivotal-sprout/sprout-wrap/fork) to 
+[Fork it](https://github.com/hannesjohansson/sprout-wrap/fork) to 
 customize its [attributes](http://docs.opscode.com/chef_overview_attributes.html) in [soloistrc](/soloistrc) and the list of recipes 
 you'd like to use for your team. You may also want to add other cookbooks to its [Cheffile](/Cheffile), perhaps one 
-of the many [community cookbooks](http://community.opscode.com/cookbooks). By default it configures an OS X 
-Mavericks workstation for Ruby development.
-
-Finally, if you've never used Chef before - we highly recommend you buy &amp; watch [this excellent 17 minute screencast](http://railscasts.com/episodes/339-chef-solo-basics) by Ryan Bates. 
+of the many [community cookbooks](http://community.opscode.com/cookbooks). To add homebrew casks (which also are pre-bundled OSX apps), check out [homebrew-cask](https://github.com/phinze/homebrew-cask/tree/master/Casks). The casks are specified last in the soloistrc file.
 
 ## Installation under Mavericks (OS X 10.9)
 
@@ -27,7 +21,7 @@ Don't forget to start up Xcode once it's installed so that you can agree to the 
   
 ### 3. Clone this project
 
-    git clone https://github.com/pivotal-sprout/sprout-wrap.git
+    git clone https://github.com/hannesjohansson/sprout-wrap.git
     cd sprout-wrap
 
 ### 4. Install soloist & and other required gems
