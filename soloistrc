@@ -24,7 +24,6 @@ recipes:
 - sprout-osx-rbenv
 - pivotal_workstation::gem_setup
 - sprout-osx-apps::node_js
-- sprout-osx-apps::qt
 
 # apps
 - pivotal_workstation::screen_sharing_app
