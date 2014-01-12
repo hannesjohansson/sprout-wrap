@@ -3,10 +3,7 @@ recipes:
 # base (required by sprout)
 - sprout-osx-base::bash_it
 - pivotal_workstation::create_var_chef_cache
-
-# curious to see if this is not needed
-# - sprout-osx-base::homebrew 
-
+- sprout-osx-base::homebrew
 - sprout-homebrew
 
 
