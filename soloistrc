@@ -6,6 +6,7 @@ recipes:
 - sprout-osx-base::homebrew
 - sprout-homebrew
 
+
 # settings
 - pivotal_workstation::sshd_on
 - pivotal_workstation::inputrc
@@ -20,36 +21,35 @@ recipes:
 - pivotal_workstation::git_config_global_defaults
 - sprout-osx-git::git_scripts
 
-# development (rails)
+# development
 - sprout-osx-rbenv
 - pivotal_workstation::gem_setup
-- sprout-osx-apps::node_js
 
 # apps
 - pivotal_workstation::screen_sharing_app
-- sprout-osx-apps::skype
-- sprout-osx-apps::shiftit
-- sprout-osx-apps::firefox
-- sprout-osx-apps::dropbox
-- sprout-osx-apps::chrome
-- pivotal_workstation::mouse_locator
-- sprout-osx-apps::menumeters
 - pivotal_workstation::bettertouchtool
-- pivotal_workstation::github_for_mac
-- sprout-osx-apps::gitx
-- sprout-osx-apps::keycastr
-- sprout-osx-apps::virtualbox
-- sprout-osx-apps::vagrant
 
-# apps installed via homebrew & homebrew casks
+# Stuff installed via homebrew & homebrew cask
 node_attributes:
   sprout:
     homebrew:
       formulae:
         - pstree
+        - node
       casks:
+        - dashlane
+        - dropbox
         - vlc
         - sublime-text
         - alfred
         - charles
         - spotify
+        - skype
+        - xquartz #needed by shiftit to work properly
+        - shiftit
+        - virtualbox
+        - vagrant
+        - firefox
+        - google-chrome
+        - gitx
+        - github
