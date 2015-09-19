@@ -1,39 +1,55 @@
-# UXHannes Workstation
+# UXHannes workstation
 
-This project is used to setup my OSX development machine. It's a fork of [sprout-wrap](https://github.com/pivotal-sprout/sprout-wrap/fork) complimented with [sprout-homebrew](https://github.com/pivotal-sprout/sprout-homebrew).
+This project uses [soloist](https://github.com/mkocher/soloist) and [librarian-chef](https://github.com/applicationsonline/librarian-chef)
+to run a subset of the recipes in sprout's cookbooks.
 
-[Fork it](https://github.com/hannesjohansson/uxhannes-workstation/fork) to 
-customize its [attributes](http://docs.opscode.com/chef_overview_attributes.html) in [soloistrc](/soloistrc) and the list of recipes 
-you'd like to use for your team. You may also want to add other cookbooks to its [Cheffile](/Cheffile), perhaps one 
-of the many [community cookbooks](http://community.opscode.com/cookbooks). To add homebrew casks (which also are pre-bundled OSX apps), check out [homebrew-cask](https://github.com/phinze/homebrew-cask/tree/master/Casks). The casks are specified last in the soloistrc file.
+Based on [sprout-wrap](https://github.com/pivotal-sprout/sprout-wrap/). [Fork it](https://github.com/pivotal-sprout/sprout-wrap/fork) to customize its [attributes](http://docs.chef.io/attributes.html) in [soloistrc](/soloistrc) and the list of recipes you'd like to use for your team. You may also want to add other cookbooks to its [Cheffile](/Cheffile), perhaps one of the many [community cookbooks](https://supermarket.chef.io/cookbooks). By default it configures an OS X Mavericks workstation for Ruby development.
+
+Finally, if you've never used Chef before - we highly recommend you buy &amp; watch [this excellent 17 minute screencast](http://railscasts.com/episodes/339-chef-solo-basics) by Ryan Bates.
 
 ## Installation under Mavericks (OS X 10.9)
 
-### 1. Install XCode
+### 1. Install Command Line Tools
 
-[![Xcode - Apple](http://r.mzstatic.com/images/web/linkmaker/badge_macappstore-lrg.gif)](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&uo=4)
-
-Don't forget to start up Xcode once it's installed so that you can agree to the terms&mdash;many commands won't work until the terms have been agreed to.
-
-### 2. Install Command Line Tools
-  
     xcode-select --install
-  
-### 3. Clone this project
 
-    git clone https://github.com/hannesjohansson/uxhannes-workstation.git
-    cd uxhannes-workstation
+If you receive a message about the update server being unavailable and are on Mavericks, then you already have the command line tools.
 
-### 4. Install soloist & and other required gems
+### 2. Clone this project
+
+    git clone https://github.com/pivotal-sprout/sprout-wrap.git
+    cd sprout-wrap
+
+### 3. Install soloist & and other required gems
 
 If you're running under rvm or rbenv, you shouldn't preface the following commands with `sudo`.
 
     sudo gem install bundler
-    sudo bundle
+    bundle
 
-### 5. Run soloist
+If you receive errors like this:
 
-[You may want to modify your Energy Saver preferences (**System Preferences &rarr; Energy Saver &rarr; Computer Sleep &rarr; 3hrs**) because soloist usually takes 2-3 hours to complete.]
+    clang: error: unknown argument: '-multiply_definedsuppress'
 
-    bundle exec soloist
+then try downgrading those errors like this:
 
+    sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future bundle
+
+### 4. Run soloist
+
+[The `caffeinate` command will keep your computer awake while installing; depending on your network connection, soloist can take from 10 minutes to 2 hours to complete.]
+
+    caffeinate bundle exec soloist
+
+## Roadmap
+
+See Pivotal Tracker: https://www.pivotaltracker.com/s/projects/884116
+
+## Discussion List
+
+  Join [sprout-users@googlegroups.com](https://groups.google.com/forum/#!forum/sprout-users) if you use Sprout.
+
+## References
+
+* Slides from @hiremaga's [lightning talk on Sprout](http://sprout-talk.cfapps.io/) at Pivotal Labs in June 2013
+* [Railscast on chef-solo](http://railscasts.com/episodes/339-chef-solo-basics) by Ryan Bates (PAID)

@@ -1,46 +1,73 @@
 recipes:
 
 # base (required by sprout)
-- sprout-osx-base::bash_it
-- pivotal_workstation::create_var_chef_cache
-- sprout-osx-base::homebrew
+- sprout-base
+- sprout-base::bash_it
+- sprout-base::homebrew
 - sprout-homebrew
 
+# apps
+- sprout-osx-apps::iterm2
+- sprout-osx-apps::shiftit
+
 # settings
-- pivotal_workstation::sshd_on
-- pivotal_workstation::inputrc
-- sprout-osx-settings::defaults_fast_key_repeat_rate
-- pivotal_workstation::locate_on
-- sprout-osx-settings::global_environment_variables
+- sprout-osx-settings
+- sprout-osx-settings::dock_preferences
+- sprout-terminal
+- sprout-ssh::known_hosts_github
 
 # development (general)
-- sprout-osx-base::workspace_directory
-- pivotal_workstation::unix_essentials
-- sprout-osx-git::git_projects
-- pivotal_workstation::git_config_global_defaults
-- sprout-osx-git::git_scripts
+- sprout-base::workspace_directory
+- sprout-git
+- sprout-git::default_editor
+- sprout-git::projects
+- sprout-git::git_scripts
 
-# development
-- sprout-osx-rbenv
-- pivotal_workstation::gem_setup
+# development (rails)
+- sprout-rbenv
+- sprout-ruby
+- sprout-mysql
+- sprout-postgresql
 
-# Stuff installed via homebrew & homebrew cask
+# apps (editors)
+- sprout-osx-apps::textmate_preferences
+- sprout-jetbrains-editors::rubymine
+
 node_attributes:
   sprout:
+    terminal:
+      default_profile: 'Pro'
+    settings:
+      clock_format: EEE MMM d  h:mm:ss a
+    dock_preferences:
+      orientation: ’bottom’
+      auto_hide: true
+      clear_apps: true
+      tile_size: 35
+      magnification: false
     homebrew:
       formulae:
-        - pstree
+        - ctags-exuberant
+        - ag
         - node
+        - pstree
+        - qt
+        - ssh-copy-id
+        - tmux
+        - tree
+        - watch
+        - wget
+        - rbenv-binstubs
+        - rbenv-gem-rehash
       casks:
+        - skype
+        - vagrant
+        - virtualbox
         - dropbox
         - vlc
         - atom
-        - alfred
         - charles
         - spotify
-        - skype
-        - virtualbox
-        - vagrant
         - firefox
         - google-chrome
         - gitx
