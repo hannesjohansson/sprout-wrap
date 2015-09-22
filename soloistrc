@@ -26,12 +26,10 @@ recipes:
 # development (rails)
 - sprout-rbenv
 - sprout-ruby
-- sprout-mysql
-- sprout-postgresql
 
-# apps (editors)
-- sprout-osx-apps::textmate_preferences
-- sprout-jetbrains-editors::rubymine
+# database stuff
+# - sprout-mysql
+# - sprout-postgresql
 
 node_attributes:
   sprout:
