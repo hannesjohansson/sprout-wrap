@@ -13,7 +13,7 @@ To provision your machine, open up Terminal and enter the following:
 ```sh
 sudo xcodebuild -license
 xcode-select --install
-git clone https://github.com/pivotal-sprout/sprout-wrap.git
+git clone https://github.com/hannesjohansson/uxhannes-workstation.git
 cd sprout-wrap
 sudo gem install bundler
 bundle install --path vendor/bundle
