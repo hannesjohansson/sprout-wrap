@@ -3,8 +3,9 @@ recipes:
 # base (required by sprout)
 - sprout-base
 - sprout-base::bash_it
-- sprout-base::homebrew
-- sprout-homebrew
+- homebrew
+- homebrew::install_formulas
+- homebrew::install_casks
 
 # apps
 - sprout-osx-apps::iterm2
@@ -36,7 +37,7 @@ node_attributes:
     terminal:
       default_profile: 'Pro'
     settings:
-      clock_format: EEE MMM d  h:mm:ss a
+      clock_format: EEE MMM d  hh:mm:ss
     dock_preferences:
       orientation: ’bottom’
       auto_hide: true
@@ -68,5 +69,6 @@ node_attributes:
         - spotify
         - firefox
         - google-chrome
+        - google-drive
         - gitx
         - github
