@@ -65,10 +65,10 @@ node_attributes:
         - dropbox
         - vlc
         - atom
-        - charles
         - spotify
         - firefox
         - google-chrome
         - google-drive
         - gitx
         - github
+        - slack
